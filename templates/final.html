@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
+        <div class="jumbotron">
+            <h1 align="center" class="retro-font">Game Over</h1>
+            <!-- <br>
+            <h5 align="center"><span class="text-primary">The correct caption was: </span>"{{correct}}"</h5>
+            <h5 align="center"><span class="text-danger">The guess was: </span>"{{guess}}"</h5> -->
+            <br>
+            <h4 align="center" class="retro-font">{{player1}}'s score: {{player1_score}}</h4>
+            <br>
+            <h4 align="center" class="retro-font">{{player2}}'s score: {{player2_score}}</h4>
+            <br>
+            <h3 align="center" class="retro-font">The winner is: {{winner}}</h3>
+            <br>
+            <a href="{{url_for('welcome')}}"><h3 align="center" class="retro-font">Bye Bye!</h3></a>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

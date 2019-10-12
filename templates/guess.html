@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
+        <div class="jumbotron">
+            <h2 align="center" class="retro-font">{{player}}'s turn</h2>
+            <h4 align="center">Guess the image that the AI generated below</h4>
+            <p align="center">But remember that the AI is trippy. Very trippy.</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+        <div class="row">
+            <img src="{{url_for('static', filename='images/generated.png')}}?num={{range(1,501)|random}}" class="mx-auto"/>
+        </div>
+        <br>
+        <form method="POST" action="/result">
+
+            <div class="form-group row">
+                <label for="guessed" class="col-sm-3 col-form-label retro-font">Guess the Caption</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="guessed" name="guessed">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary retro-font">Submit Guess</button>
+                </div>
+                <input type="hidden" name="guesser" value="{{player}}"/>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
+        <div class="jumbotron">
+            <h1 align="center" class="retro-font">Result</h1>
+            <br>
+            <h5 align="center"><span class="text-primary">The correct caption was: </span>"{{correct}}"</h5>
+            <h5 align="center"><span class="text-danger">The guess was: </span>"{{guess}}"</h5>
+            <br>
+            <h4 align="center">Another trippy AI was incharge of scoring you.</h4>
+            <br>
+            <h3 align="center" class="retro-font">{{scoreof}}'s score: {{score_val}}%</h3>
+            <br>
+            <form method="post" action='{% if next_page=="desc" %}/game{% else %}/end{%endif%}' style="text-align: center">
+                <button type="submit" class="btn btn-primary retro-font" style="text-align: center">Continue</button>
+                <input type="hidden" name="from_prev" value="" />
+                <input type="hidden" name="guesser" value="{{scoreof}}" />
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

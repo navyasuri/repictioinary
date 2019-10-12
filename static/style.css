@@ -1,0 +1,26 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+
+marquee {
+    background: black;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.marquee-down {
+    position: fixed;
+    bottom: 0px;
+}
+
+.retro-font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.row{
+    margin-right: 0px !important;
+}

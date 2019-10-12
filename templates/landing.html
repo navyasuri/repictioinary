@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+        <div class="col-6 offset-3">
+            <div class="jumbotron">
+                <br>
+                <h1 align='center' class="retro-font">Welcome</h1>
+                <p>This is Repictionary, the opposite of pictionary, an AI Powered 2 player game. First, find yourself a partner.</p>
+                <p>Now, the AI is Trippy so expect funny things. The game is quite simple. Player 1 will write a description of an image for Player 2 to guess. Genius AI artist will paint the picture, and Player 2 will guess. Scored based on how close the answer is to the original sentence.</p>
+                <p>You will be directed to the game options page, after which you will begin the game.</p>
+                <p>Here's 2 example captions for images to give you an idea: (1) A potato salad in a bowl. (2) People on the beach</p>
+                <a href="{{url_for('game_setup')}}"><h2 align="center" class="retro-font">Are you ready?</h2></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

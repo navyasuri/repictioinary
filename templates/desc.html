@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
+            <div class="jumbotron">
+                <h2 align="center" class="retro-font">{{player}}'s turn</h2>
+                <h4 align="center">Write down a description below</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+            <form method="POST" action="">
+
+                <div class="form-group row">
+                    <label for="caption" class="col-sm-3 col-form-label retro-font">Caption for Image</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="caption" name="caption" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary retro-font">Generate Image</button>
+                    </div>
+                    <input type="hidden" name="from_desc" value="">
+                    <input type="hidden" name="d_player" value={{player}}>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}
